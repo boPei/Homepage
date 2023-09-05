@@ -26,57 +26,37 @@ Licence: Creative Commons Attribution 3.0** - http://creativecommons.org/license
 <![endif]-->
 
 <style>
-  #container {
-      width: 300px;
-      height: 300px;
-      /* overflow: hidden; */
-      }
-  #photo {
-      width: 3000px;
-      /* height: 100%; */
-      animation: switch 5s ease-out infinite;
-      }
-  #photo > img {
-      float: left;
-      width:  250px;
-      height: 200px;
-      }
-      @keyframes switch {
-      0%{
-      margin-left: -400px;
-      }
-      15%{
-        margin-left: -600px;
-      }
-      25%{
-        margin-left: -700px;
-      }
-      35%{
-        margin-left: -800px;
-      }
-      40% {
-      margin-left: -900px;
-      }
-      50%{
-      margin-left: -1000px;
-      }
-      60% {
-      margin-left: -1100px;
-      }
-      70% {
-      margin-left: -1200px;
-      }
-      80% {
-      margin-left: -1300px;
-      }
-      90% {
-      margin-left: -1400px;
-      }
-      100% {
-      margin-left: -1500px;
-      }
-      }
+      .wrapper {
+                display: flex;
+               }
+
+                .slider {
+                width: 100%;
+                height: 300px;
+                padding:0px 0px 0px 0px;
+                display: flex;
+                overflow:hidden;
+                }
+
+                .slide img {
+                height: 200px;
+                padding: 0 1px 0 0;
+                }
+
+                .slide {
+                height: 200px;
+                display: flex;
+                align-items: center;
+                animation: slideshow 5s linear infinite;
+                }
+
+                @keyframes slideshow {
+                0% {transform: translateX(0);}
+                100% {transform: translateX(-100%);}
+                }
 </style>
+
+
 </head>
 <body>
 
@@ -174,23 +154,39 @@ Licence: Creative Commons Attribution 3.0** - http://creativecommons.org/license
     <h2>Visualizations</h2>
     <div class="service_wrapper">
       <div class="row">
-        <div class="container">
-          <div id="photo">
-            <img src="projImages/studPerf1.jpg">
-            <img src="projImages/studPerf1.p.png">
-            <img src="projImages/studPerf10.png">
-            <img src="projImages/studPerf11.png">
-            <img src="projImages/studPerf12.png">
-            <img src="projImages/studPerf13.png">
-            <img src="projImages/studPerf2.png">
-            <img src="projImages/studPerf3.png">
-            <img src="projImages/studPerf4.png">
-            <img src="projImages/studPerf5.png">
-            <img src="projImages/studPerf6.png">
-            <img src="projImages/studPerf7.png">
-          </div>
-        </div>
+        <div class="wrapper">
+          <div class="slider">
+              <div class="slide">
+                <img src="projImages/studPerf1.jpg">
+                <img src="projImages/studPerf1.p.png">
+                <img src="projImages/studPerf10.png">
+                <img src="projImages/studPerf11.png">
+                <img src="projImages/studPerf12.png">
+                <img src="projImages/studPerf13.png">
+                <img src="projImages/studPerf2.png">
+                <img src="projImages/studPerf3.png">
+                <img src="projImages/studPerf4.png">
+                <img src="projImages/studPerf5.png">
+                <img src="projImages/studPerf6.png">
+                <img src="projImages/studPerf7.png">
+              </div>
 
+              <div class="slide">
+                <img src="projImages/studPerf1.jpg">
+                <img src="projImages/studPerf1.p.png">
+                <img src="projImages/studPerf10.png">
+                <img src="projImages/studPerf11.png">
+                <img src="projImages/studPerf12.png">
+                <img src="projImages/studPerf13.png">
+                <img src="projImages/studPerf2.png">
+                <img src="projImages/studPerf3.png">
+                <img src="projImages/studPerf4.png">
+                <img src="projImages/studPerf5.png">
+                <img src="projImages/studPerf6.png">
+                <img src="projImages/studPerf7.png">
+              </div>
+          </div>
+      </div>
       </div> 
     </div>
   </div>
