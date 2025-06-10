@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VISTA Lab</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/2f7303e6bd.js" crossorigin="anonymous"></script>
+
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+        <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-lg-0">
+            <h1 class="text-primary m-0"><img class="me-3" style="width: 250px; height: 60px;" src="img/icons/Lab.png" alt="Icon"></h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="#team" class="nav-item nav-link">Team</a>
+                <a href="news.html" class="nav-item nav-link">News</a>
+                <a href="project.html" class="nav-item nav-link">Research Projects</a>
+                <a href="publications.html" class="nav-item nav-link active">Publications</a>
+                <a href="tools.html" class="nav-item nav-link">Tools & Software</a>
+                <a href="Expertise.html" class="nav-item nav-link">Our Expertise</a>
+            </div>
+            <a href="jointhelab.html" class="btn btn-primary py-2 px-4 d-none d-lg-block">Join the Lab</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid normal-page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-1 text-white animated slideInDown">Publications</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page"
+                        style="font-size: large;font-weight: 100;">Publications</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!--Publication Start-->
+    <div class="container py-5">
+        <header class="text-center header-section">
+            <h1 class="display-4">Publications</h1>
+            <p class="lead">A curated list of our research publications.</p>
+        </header>
+
+        <!-- Filters and Search -->
+        <div class="row mb-5 g-3 align-items-center filter-section">
+            <div class="col-lg-5">
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                    <input type="text" id="searchInput" class="form-control"
+                        placeholder="Search by title, author, or venue...">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <select id="yearFilter" class="form-select">
+                    <option value="all">All Years</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                </select>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="input-group">
+                    <label class="input-group-text" for="typeFilter"><i class="fas fa-tags"></i></label>
+                    <select id="typeFilter" class="form-select">
+                        <option value="all">All Types</option>
+                        <option value="Journal">Journal</option>
+                        <option value="Conference">Conference</option>
+                        <option value="Workshop">Workshop</option>
+                        <option value="Book Chapter">Book Chapter</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publications List -->
+        <div id="publications-list">
+            <!-- Publications for 2025 -->
+            <div class="publication-year" id="year-2025">
+                <h2 class="year-heading">2025</h2>
+
+                <!-- 1. Journal -->
+                <div class="card publication-card journal " data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge bg-primary text-dark ">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://www.sciencedirect.com/science/article/pii/S2666920X25000463"
+                                target="_blank">
+                                Empowering preservice teachers’ AI literacy: Current understanding, influential factors,
+                                and strategies for improvement
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> <b>Bo Pei</b>, Jie Lu, Xilong Jing</p>
+                        <p class="card-text venue">Computers and Education: Artificial Intelligence, 2025.</p>
+                        <!-- <a href="https://www.sciencedirect.com/science/article/pii/S2666920X25000463"
+                            class="btn btn-sm btn-outline-primary mt-2" target="_blank">View Paper</a> -->
+                    </div>
+                </div>
+
+                <!-- 2. Conference -->
+                <div class="card publication-card conference mb-3" data-type="Conference">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-success me-2">Conference</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://www.igi-global.com/chapter/enhancing-mastery-based-learning-an-analytical-approach-to-providing-actionable-support/374765"
+                                target="_blank">
+                                Enhancing Mastery-Based Learning: An Analytical Approach to Providing Actionable Support
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> Thomas Joyce, <b>Bo Pei</b>, Alison
+                            Cheng, Alex Ambrose, Brian Mulholland</p>
+                        <p class="card-text venue">Cultivating Flourishing Practices and Environments by Embracing
+                            Positive Education, IGI Global Scientific Publishing, 2025.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Book Chapter -->
+                <div class="card publication-card book-chapter mb-3" data-type="Book Chapter">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-danger me-2">Book Chapter</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://www.intechopen.com/online-first/1211172" target="_blank">
+                                Understanding Students’ Learning Motivations in Online Learning Settings: From a
+                                Quantitative Perspective
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> <b>Bo Pei</b></p>
+                        <p class="card-text venue">IntechOpen, 2025.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Book Chapter -->
+                <div class="card publication-card book-chapter mb-3" data-type="Book Chapter">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-danger me-2">Book Chapter</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://doi.org/10.1007/978-981-99-9379-6_7" target="_blank">
+                                Predicting Response Latencies on Test Questions Based on Features of the Questions
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> M. Denner, X. Xu, T. Ober, <b>Bo Pei</b>,
+                            Y. Cheng</p>
+                        <p class="card-text venue">Machine Learning in Educational Sciences, Springer, 2025.</p>
+                        <!-- <a href="https://doi.org/10.1007/978-981-99-9379-6_7" class="btn btn-sm btn-outline-danger mt-2"
+                            target="_blank">View Paper</a> -->
+                    </div>
+                </div>
+
+                <!-- 5. Conference -->
+                <div class="card publication-card conference mb-3" data-type="Conference">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-success me-2">Conference</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://www.learntechlib.org/p/225871/" target="_blank">
+                                Viz4Edu: An LLM-Powered Adaptive Learning Platform for Data Visualization
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> Xilong Jing, <b>Bo Pei</b></p>
+                        <p class="card-text venue">Proceedings of Society for Information Technology & Teacher Education
+                            International Conference, 2025.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Journal -->
+                <!-- <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="#" target="_blank">
+                                Current Status of Pre-service Teachers’ AI literacy
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> <b>Bo Pei</b>, Jie Lu, Xilong Jing</p>
+                        <p class="card-text venue">Computers and Education: Artificial Intelligence, 2025.</p>
+                    </div>
+                </div> -->
+            </div>
+
+
+
+
+
+
+            <!-- Publications for 2024 -->
+            <div class="publication-year" id="year-2024">
+                <h2 class="year-heading">2024</h2>
+
+                <!-- Journal -->
+                <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://slejournal.springeropen.com/articles/10.1186/s40561-024-00346-1"
+                                target="_blank">
+                                LearningViz: a dashboard for visualizing, analyzing and closing learning performance
+                                gaps—a case study approach
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> <b>Bo Pei</b>, Y. Cheng, A. Ambrose, E.
+                            Dziadula, W. Xing, J. Lu</p>
+                        <p class="card-text venue">Smart Learning Environments, 11(1), 1-25.</p>
+                        <!-- <a href="https://slejournal.springeropen.com/articles/10.1186/s40561-024-00346-1" class="btn btn-sm btn-outline-primary mt-2" target="_blank">View Paper</a> -->
+                    </div>
+                </div>
+
+                <!-- Journal -->
+                <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://www.tandfonline.com/doi/abs/10.1080/01587919.2024.2401085" target="_blank">
+                                The dynamics of role evolution in online learning communities
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> W. Xing, <b>Bo Pei</b>, W. Zhu, H. Li, R.
+                            Guo</p>
+                        <p class="card-text venue">Distance Education, 1-25.</p>
+                        <!-- <a href="https://www.tandfonline.com/doi/abs/10.1080/01587919.2024.2401085" class="btn btn-sm btn-outline-primary mt-2" target="_blank">View Paper</a> -->
+                    </div>
+                </div>
+
+                <!-- Journal -->
+                <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://www.researchgate.net/publication/383402949_Commentary_A_Data-Driven_Analysis_of_Recent_Job_Posts_to_Evaluate_the_Foundational_Competencies"
+                                target="_blank">
+                                Commentary: A Data-Driven Analysis of Recent Job Posts to Evaluate the Foundational
+                                Competencies
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> Y. Cheng, <b>Bo Pei</b>, A. Filonczuk, A.
+                            Le</p>
+                        <p class="card-text venue">Educational Measurement: Issues and Practice, 43(3), 39-44.</p>
+                    </div>
+                </div>
+
+                <!-- Journal -->
+                <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://ieeexplore.ieee.org/document/10766587" target="_blank">
+                                Learning Consistent Semantic Representation for Chest X-ray via Anatomical Localization
+                                in Self-supervised Pre-training
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> Surong Chu, Xueting Ren, Guohua Ji,
+                            Juanjuan Zhao, Jinwei Shi, Yangyang Wei, <b>Bo Pei</b>, Yan Qiang</p>
+                        <p class="card-text venue">IEEE Journal of Biomedical and Health Informatics, 2024.</p>
+                    </div>
+                </div>
+
+                <!-- Journal -->
+                <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://journals.sagepub.com/doi/10.1177/07356331241240459" target="_blank">
+                                The Efficacy of Artificial Intelligence-Enabled Adaptive Learning Systems From 2010 to
+                                2022 on Learner Outcomes: A Meta-Analysis
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> X. Wang, R. Huang, M. Sommer, <b>Bo
+                                Pei</b>, P. Shidfar, M.S. Rehman, A. Ritzhaupt, F. Martin</p>
+                        <p class="card-text venue">Journal of Educational Computing Research, 2024.</p>
+                    </div>
+                </div>
+
+                <!-- Conference (Accepted) -->
+                <div class="card publication-card conference mb-3" data-type="Conference">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-success me-2">Conference</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://ieeexplore.ieee.org/document/10893383" target="_blank">
+                                Examining Student Learning Engagement in Canvas to Support Personalized Learning
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> Z. Zhang, <b>Bo Pei</b>, J. Hatten, Z.
+                            Zhou</p>
+                        <p class="card-text venue">IEEE Frontiers in Education Conference (FIE), 2024.</p>
+                    </div>
+                </div>
+
+                <!-- Conference (Accepted) -->
+                <div class="card publication-card conference mb-3" data-type="Conference">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-success me-2">Conference</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10893384" target="_blank">
+                                Advancing Engineering and Computing Education through the Lens of Learning Analytics
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> Z. Zhang, J. Lu, <b>Bo Pei</b>, Y. Huang
+                        </p>
+                        <p class="card-text venue">IEEE Frontiers in Education Conference (FIE), 2024.</p>
+                    </div>
+                </div>
+
+                <!-- Conference -->
+                <div class="card publication-card conference mb-3" data-type="Conference">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-success me-2">Conference</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://dl.acm.org/doi/10.1145/3641554.3701794#:~:text=We%20found%20that%20while%20live,scores%2C%20nor%20in%20final%20grades."
+                                target="_blank">
+                                Live Coding Prompts Engagement, But Not Necessarily Grades
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> H. Du, D. Udokop, <b>Bo Pei</b></p>
+                        <p class="card-text venue">ACM Technical Symposium on Computer Science Education, 2024.</p>
+                    </div>
+                </div>
+
+                <!-- Journal -->
+                <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://link.springer.com/article/10.1007/s10639-023-11954-8" target="_blank">
+                                Towards transparent and trustworthy prediction of student learning achievement by
+                                including instructors as co-designers: a case study
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> X. Duan, <b>Bo Pei</b>, G.A. Ambrose, Y.
+                            Cheng, C. Wang</p>
+                        <p class="card-text venue">Education and Information Technologies, 2024.</p>
+                        <!-- <a href="https://link.springer.com/article/10.1007/s10639-023-11954-8" class="btn btn-sm btn-outline-primary mt-2" target="_blank">View Paper</a> -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Publications for 2023 -->
+            <div class="publication-year" id="year-2023">
+                <h2 class="year-heading">2023</h2>
+
+                <!-- Journal -->
+                <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://link.springer.com/article/10.1007/s10639-023-11954-8" target="_blank">
+                                Towards transparent and trustworthy prediction of student learning achievement by
+                                including instructors as co-designers: a case study
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> X. Duan, <b>Bo Pei</b>, G.A. Ambrose, Y.
+                            Cheng, C. Wang</p>
+                        <p class="card-text venue">Education and Information Technologies, 2023.</p>
+                        <!-- <a href="https://link.springer.com/article/10.1007/s10639-023-11954-8" class="btn btn-sm btn-outline-primary mt-2" target="_blank">View Paper</a> -->
+                    </div>
+                </div>
+
+                <!-- Conference -->
+                <div class="card publication-card conference mb-3" data-type="Conference">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-success me-2">Conference</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://www.researchgate.net/publication/389111459_Live_Coding_Prompts_Engagement_But_Not_Necessarily_Grades"
+                                target="_blank">
+                                Live Coding Prompts Engagement, But Not Necessarily Grades
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> H. Du, D. Udokop, <b>Bo Pei</b></p>
+                        <p class="card-text venue">56th ACM Technical Symposium on Computer Science Education.
+                            Pittsburgh, Pennsylvania, USA.</p>
+                    </div>
+                </div>
+
+                <!-- Journal -->
+                <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://link.springer.com/article/10.1007/s10639-022-11538-y" target="_blank">
+                                Integrating infrared technologies in science learning: An evidence-based reasoning
+                                perspective
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> <b>Bo Pei</b>, W. Xing, G. Zhu, K.
+                            Antonyan, C. Xie</p>
+                        <p class="card-text venue">Education and Information Technologies, 28(7), 8423-8443.</p>
+                    </div>
+                </div>
+
+                <!-- Journal -->
+                <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://link.springer.com/article/10.1007/s10639-022-11538-y" target="_blank">
+                                A Descriptive and Historical Review of STEM + C Research: A Bibliometric Study
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> H. Du, W. Xing, <b>Bo Pei</b>, Y. Zeng,
+                            J. Lu, Y. Zhang</p>
+                        <p class="card-text venue">In J. Uhomoibhi (Ed.), Computer Supported Education. CSEDU 2022.
+                            Communications in Computer and Information Science, vol 1817. Springer, Cham.</p>
+                        <!-- <a href="https://link.springer.com/article/10.1007/s10639-022-11538-y" class="btn btn-sm btn-outline-primary mt-2" target="_blank">View Paper</a> -->
+                    </div>
+                </div>
+
+                <!-- Book Chapter -->
+                <div class="card publication-card book-chapter mb-3" data-type="Book Chapter">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-danger me-2">Book Chapter</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://www.igi-global.com/chapter/enhancing-mastery-based-learning-an-analytical-approach-to-providing-actionable-support/374765"
+                                target="_blank">
+                                Enhancing Mastery-Based Learning: An Analytical Approach to Providing Actionable Support
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> T. Joyce, <b>Bo Pei</b>, A. Cheng, A.
+                            Ambrose, B. Mulholland</p>
+                        <p class="card-text venue">In Cultivating Flourishing Practices and Environments by Embracing
+                            Positive Education (pp. 79-118). IGI Global Scientific Publishing.</p>
+                    </div>
+                </div>
+
+                <!-- Journal -->
+                <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://ieeexplore.ieee.org/document/10766587" target="_blank">
+                                Learning Consistent Semantic Representation for Chest X-ray via Anatomical Localization
+                                in Self-supervised Pre-training
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> Surong Chu, Xueting Ren, Guohua Ji,
+                            Juanjuan Zhao, Jinwei Shi, Yangyang Wei, <b>Bo Pei</b>, Yan Qiang</p>
+                        <p class="card-text venue">IEEE Journal of Biomedical and Health Informatics, 2023.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Publication for 2022 -->
+            <div class="publication-year" id="year-2022">
+                <h2 class="year-heading">2022</h2>
+
+                <!-- Journal -->
+                <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://link.springer.com/article/10.1007/s10639-022-11538-y" target="_blank">
+                                Integrating infrared technologies in science learning: An evidence-based reasoning
+                                perspective
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> <b>Bo Pei</b>, W. Xing, G. Zhu, K.
+                            Antonyan, C. Xie</p>
+                        <p class="card-text venue">Education and Information Technologies, 1-21.</p>
+                        <!-- <a href="https://link.springer.com/article/10.1007/s10639-022-11538-y" class="btn btn-sm btn-outline-primary mt-2" target="_blank">View Paper</a> -->
+                    </div>
+                </div>
+
+                <!-- Conference -->
+                <div class="card publication-card conference mb-3" data-type="Conference">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-success me-2">Conference</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://link.springer.com/chapter/10.1007/978-3-031-40501-3_1" target="_blank">
+                                A Descriptive and Historical Review of STEM + C Research: A Bibliometric Study
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> H. Du, W. Xing, <b>Bo Pei</b>, Y.
+                            Zeng, J. Lu, Y. Zhang</p>
+                        <p class="card-text venue">In International Conference on Computer Supported Education (pp.
+                            1-25). Springer, Cham.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Publication for 2021 -->
+            <div class="publication-year" id="year-2021">
+                <h2 class="year-heading">2021</h2>
+
+                <!-- Journal: An Interpretable Pipeline for Identifying At-Risk Students -->
+                <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://journals.sagepub.com/doi/full/10.1177/07356331211038168" target="_blank">
+                                An Interpretable Pipeline for Identifying At-Risk Students
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> <b>Bo Pei</b>, W. Xing</p>
+                        <p class="card-text venue">Journal of Educational Computing Research, 60(2), 380-405.</p>
+                        <!-- <a href="https://journals.sagepub.com/doi/full/10.1177/07356331211038168" class="btn btn-sm btn-outline-primary mt-2" target="_blank">View Paper</a> -->
+                    </div>
+                </div>
+
+                <!-- Journal: Academic development of multimodal learning analytics -->
+                <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://www.tandfonline.com/doi/abs/10.1080/10494820.2021.1936075" target="_blank">
+                                Academic development of multimodal learning analytics: a bibliometric analysis
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> <b>Bo Pei</b>, W. Xing, M. Wang</p>
+                        <p class="card-text venue">Interactive Learning Environments, 31(6), 3543–3561.</p>
+                        <!-- <a href="https://www.tandfonline.com/doi/abs/10.1080/10494820.2021.1936075" class="btn btn-sm btn-outline-primary mt-2" target="_blank">View Paper</a> -->
+                    </div>
+                </div>
+
+                <!-- Journal: Automatic text generation using deep learning -->
+                <div class="card publication-card journal mb-3" data-type="Journal">
+                    <div class="card-body">
+                        <span class="badge text-dark bg-primary me-2">Journal</span>
+                        <h5 class="card-title publication-title">
+                            <a href="https://www.tandfonline.com/doi/full/10.1080/10494820.2021.1993932"
+                                target="_blank">
+                                Automatic text generation using deep learning: providing large-scale support for online
+                                learning communities
+                            </a>
+                        </h5>
+                        <p class="card-text authors"><strong>Authors:</strong> H. Du, W. Xing, <b>Bo Pei</b></p>
+                        <p class="card-text venue">Interactive Learning Environments, 1-16.</p>
+                    </div>
+                </div>
+
+
+                <!-- Publications for 2019 -->
+                <div class="publication-year" id="year-2019">
+                    <h2 class="year-heading">2019</h2>
+
+                    <!-- Journal: Using Automatic Image Processing to Analyze Visual Artifacts Created by Students in Scientific Argumentation -->
+                    <div class="card publication-card journal mb-3" data-type="Journal">
+                        <div class="card-body">
+                            <span class="badge text-dark bg-primary me-2">Journal</span>
+                            <h5 class="card-title publication-title">
+                                <a href="https://bera-journals.onlinelibrary.wiley.com/doi/abs/10.1111/bjet.12741"
+                                    target="_blank">
+                                    Using Automatic Image Processing to Analyze Visual Artifacts Created by Students in
+                                    Scientific Argumentation
+                                </a>
+                            </h5>
+                            <p class="card-text authors"><strong>Authors:</strong> <b>Bo Pei</b>, W. Xing, H. S. Lee</p>
+                            <p class="card-text venue">British Journal of Educational Technology, 50(6), 3391-3404.</p>
+                        </div>
+                    </div>
+
+                    <!-- Journal: Using learning analytics to support students’ engineering design: The angle of prediction -->
+                    <div class="card publication-card journal mb-3" data-type="Journal">
+                        <div class="card-body">
+                            <span class="badge text-dark bg-primary me-2">Journal</span>
+                            <h5 class="card-title publication-title">
+                                <a href="https://www.tandfonline.com/doi/full/10.1080/10494820.2019.1680391"
+                                    target="_blank">
+                                    Using learning analytics to support students’ engineering design: The angle of
+                                    prediction
+                                </a>
+                            </h5>
+                            <p class="card-text authors"><strong>Authors:</strong> W. Xing, <b>Bo Pei</b>, S. Li, G.
+                                Chen, C. Xie</p>
+                            <p class="card-text venue">Interactive Learning Environments, 1-18.</p>
+                        </div>
+                    </div>
+
+                    <!-- Journal: Time Really Matters: Understanding the Temporal Dimension of Online Learning Using Educational Data Mining -->
+                    <div class="card publication-card journal mb-3" data-type="Journal">
+                        <div class="card-body">
+                            <span class="badge text-dark bg-primary me-2">Journal</span>
+                            <h5 class="card-title publication-title">
+                                <a href="https://journals.sagepub.com/doi/full/10.1177/0735633118784705?casa_token=ETQU-QHPnvoAAAAA%3ArCBELMb3C_pZaxzlir-Rn6Y9ttFvtZpRe-JJQ0UrmqDIE1NQjApLbnEPFMA-l4QfZB4QYA5YphcY3Q"
+                                    target="_blank">
+                                    Time Really Matters: Understanding the Temporal Dimension of Online Learning Using
+                                    Educational Data Mining
+                                </a>
+                            </h5>
+                            <p class="card-text authors"><strong>Authors:</strong> H. Tang, W. Xing, <b>Bo Pei</b></p>
+                            <p class="card-text venue">Journal of Educational Computing Research, 57(5), 1326-1347.</p>
+                            <!-- <a href="https://journals.sagepub.com/doi/full/10.1177/0735633118784705?casa_token=ETQU-QHPnvoAAAAA%3ArCBELMb3C_pZaxzlir-Rn6Y9ttFvtZpRe-JJQ0UrmqDIE1NQjApLbnEPFMA-l4QfZB4QYA5YphcY3Q" class="btn btn-sm btn-outline-primary mt-2" target="_blank">View Paper</a> -->
+                        </div>
+                    </div>
+
+                    <!-- Journal: Beyond Positive and Negative Emotions: Looking into the Role of Achievement Emotions in Discussion Forums of MOOCs -->
+                    <div class="card publication-card journal mb-3" data-type="Journal">
+                        <div class="card-body">
+                            <span class="badge text-dark bg-primary me-2">Journal</span>
+                            <h5 class="card-title publication-title">
+                                <a href="https://www.sciencedirect.com/science/article/abs/pii/S1096751618301921"
+                                    target="_blank">
+                                    Beyond Positive and Negative Emotions: Looking into the Role of Achievement Emotions
+                                    in Discussion Forums of MOOCs
+                                </a>
+                            </h5>
+                            <p class="card-text authors"><strong>Authors:</strong> W. Xing, H. Tang, <b>Bo Pei</b></p>
+                            <p class="card-text venue">The Internet and Higher Education, 43, 100690.</p>
+                        </div>
+                    </div>
+
+                    <!-- Journal: Exploring the Interaction between Emotional Dynamics and Idea Improvement across Knowledge Building Spaces -->
+                    <div class="card publication-card journal mb-3" data-type="Journal">
+                        <div class="card-body">
+                            <span class="badge text-dark bg-primary me-2">Journal</span>
+                            <h5 class="card-title publication-title">
+                                <a href="https://www.researchgate.net/publication/341852394_Idea_improvement_patterns_in_Knowledge_Building_undergraduate_and_graduate_levels"
+                                    target="_blank">
+                                    Exploring the Interaction between Emotional Dynamics and Idea Improvement across
+                                    Knowledge Building Spaces
+                                </a>
+                            </h5>
+                            <p class="card-text authors"><strong>Authors:</strong> G. Zhu, W. Xing, S. Costa, M.
+                                Scardamalia, <b>Bo Pei</b></p>
+                            <p class="card-text venue">User Modeling and User-adapted Interaction, 29(4), 789-820.</p>
+                        </div>
+                    </div>
+
+                    <!-- Book Chapter: The exploration of automated image processing techniques in the study of scientific argumentation -->
+                    <div class="card publication-card book-chapter mb-3" data-type="Book Chapter">
+                        <div class="card-body">
+                            <span class="badge text-dark bg-danger me-2">Book Chapter</span>
+                            <h5 class="card-title publication-title">
+                                <a href="https://www.researchgate.net/publication/332815780_The_Exploration_of_Automated_Image_Processing_Techniques_in_the_Study_of_Scientific_Argumentation"
+                                    target="_blank">
+                                    The exploration of automated image processing techniques in the study of scientific
+                                    argumentation
+                            </h5>
+                            <p class="card-text authors"><strong>Authors:</strong> <b>Bo Pei</b>, H. Zhao, W. Xing, H.
+                                S. Lee</p>
+                            <p class="card-text venue">In Cognitive computing in technology-enhanced learning (pp.
+                                175-190). IGI Global.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publications for 2018 -->
+                <div class="publication-year" id="year-2018">
+                    <h2 class="year-heading">2018</h2>
+
+                    <!-- Journal: Exploring the temporal dimension of forum participation in MOOCs -->
+                    <div class="card publication-card journal mb-3" data-type="Journal">
+                        <div class="card-body">
+                            <span class="badge text-dark bg-primary me-2">Journal</span>
+                            <h5 class="card-title publication-title">
+                                <a href="https://www.tandfonline.com/doi/full/10.1080/01587919.2018.1476841"
+                                    target="_blank">
+                                    Exploring the temporal dimension of forum participation in MOOCs
+                                </a>
+                            </h5>
+                            <p class="card-text authors"><strong>Authors:</strong> H. Tang, W. Xing, <b>Bo Pei</b></p>
+                            <p class="card-text venue">Distance Education, 39(3), 353-372.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Publications End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Address</h3>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>4110 USF Apple Dr, Tampa, Fl,
+                        US</p>
+                    <!-- <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p> -->
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>bpei@usf.edu</p>
+                    <!-- <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-body me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div> -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">RESEARCH AREAS</h3>
+                    <a class="btn btn-link" href="aiineducation.html">AI in Education</a>
+                    <a class="btn btn-link" href="scientificprogress.html">Scientific Progress Analysis</a>
+                    <a class="btn btn-link" href="ailiteracy.html">AI Literacy in Education</a>
+                    <a class="btn btn-link" href="learninganalytics.html">Learning Analytics</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Quick Links</h3>
+                    <a class="btn btn-link" href="index.html">Home</a>
+                    <a class="btn btn-link" href="project.html">Research Projects</a>
+                    <a class="btn btn-link" href="Expertise.html">Our Expertise</a>
+                    <a class="btn btn-link" href="publications.html">Publications</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Contact Us</h3>
+                    <p>Send an Email and we'll reach back to you.</p>
+                    <div class="position-relative mx-auto mb-3" style="max-width: 400px;">
+                        <button type="button" class="btn btn-primary py-2 position top-0" href="jointhelab.html">Join
+                            the Lab</button>
+                    </div>
+                    <!-- <div class="clustrmaps-wrapper bg-light rounded-4 shadow-sm p-3 text-center">
+                        <div class="mb-1 fw-semibold text-dark" style="font-size: 1rem;">🌍 Visitors Map</div> -->
+                        <!-- ClustrMaps Widget Start -->
+                         <!-- <a href='https://clustrmaps.com/site/1c6j0'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=57n_cJjf8qZKk_hNyqkQs2b-R9i0jzzMBHXTmaYFdA0'/></a> -->
+                        <!-- ClustrMaps Widget End -->
+                    <!-- </div> -->
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">VISTA Lab @ USF</a>, All Right Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        fetch('publications.json')
+            .then(response => response.json())
+            .then(data => {
+                const list = document.getElementById('publicationList');
+                const yearFilter = document.getElementById('yearFilter');
+                const typeFilter = document.getElementById('typeFilter');
+
+                const years = [...new Set(data.map(pub => pub.year))].sort().reverse();
+                years.forEach(year => {
+                    const option = document.createElement('option');
+                    option.value = year;
+                    option.textContent = year;
+                    yearFilter.appendChild(option);
+                });
+
+                function renderPubs() {
+                    const selectedYear = yearFilter.value;
+                    const selectedType = typeFilter.value;
+
+                    list.innerHTML = '';
+                    data.forEach(pub => {
+                        if ((selectedYear === 'all' || pub.year === selectedYear) &&
+                            (selectedType === 'all' || pub.type === selectedType)) {
+
+                            const card = document.createElement('div');
+                            card.className = 'col-lg-6';
+                            card.innerHTML = `
+                        <div class="bg-light rounded p-4 shadow-sm h-100">
+                            <h5 class="text-dark">${pub.title}</h5>
+                            <p><strong>Authors:</strong> ${pub.authors}</p>
+                            <p><strong>Venue:</strong> ${pub.venue}</p>
+                            <a href="${pub.link}" target="_blank">View Publication</a>
+                        </div>`;
+                            list.appendChild(card);
+                        }
+                    });
+                }
+
+                yearFilter.addEventListener('change', renderPubs);
+                typeFilter.addEventListener('change', renderPubs);
+                renderPubs();
+            });
+    </script>
+
+</body>
+
+</html>
