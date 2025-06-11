@@ -694,6 +694,25 @@ header {
     box-shadow: 0 0 45px rgba(0, 0, 0, .05);
 }
 
+
+.team-item .position-relative {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 400px; /* match your image height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-item .position-relative img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .team-item .team-social {
     position: absolute;
     top: 0;
