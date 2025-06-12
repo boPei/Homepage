@@ -1,0 +1,1 @@
+The VISTA Lab (Visualization, Intelligent Systems, and Trustworthy AI in Education) conducts research at the intersection of learning analytics, AI, and data visualization to promote equitable and effective educational practices.
