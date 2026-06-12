@@ -593,27 +593,45 @@
                         <script type='text/javascript' id='clustrmaps' src='https://cdn.clustrmaps.com/map_v2.js?cl=130071&w=a&t=n&d=57n_cJjf8qZKk_hNyqkQs2b-R9i0jzzMBHXTmaYFdA0&co=000000&cmo=3acc3a&cmn=ff5353&ct=808080'></script>
                         </div> -->
                         
-                        <style>
-                          .mmv-dark-wrapper {
-                            width: 505px;
-                            display: inline-block;
-                            overflow: hidden;
-                            background: #252525;
-                          }
-                        
-                          .mmv-dark-filter {
-                            width: 505px;
-                            filter: grayscale(100%) brightness(55%) contrast(125%);
-                          }
-                        </style>
-                        
-                        <div class="mmv-dark-wrapper">
-                          <div class="mmv-dark-filter">
-                            <script type="text/javascript" id="mapmyvisitors"
-                              src="https://mapmyvisitors.com/map.js?d=d8oFblGGabRBEXTZQtDv8_uKBInr87bMosGh4lGiTP0&cl=ffffff&w=500">
-                            </script>
-                          </div>
-                        </div>
+                                <style>
+                                  .mmv-dark-wrapper {
+                                    width: 505px;
+                                    display: inline-block;
+                                    overflow: hidden;
+                                    background: #252525 !important;
+                                  }
+                                </style>
+                                
+                                <div class="mmv-dark-wrapper" id="myVisitorMap">
+                                  <script type="text/javascript" id="mapmyvisitors"
+                                    src="https://mapmyvisitors.com/map.js?d=d8oFblGGabRBEXTZQtDv8_uKBInr87bMosGh4lGiTP0&cl=ffffff&w=500">
+                                  </script>
+                                </div>
+                                
+                                <script>
+                                  function replaceMapBlueOnly() {
+                                    const box = document.querySelector("#myVisitorMap");
+                                    if (!box) return;
+                                
+                                    box.querySelectorAll("*").forEach(function(el) {
+                                      const bg = window.getComputedStyle(el).backgroundColor;
+                                
+                                      // 只替换 MapMyVisitors 默认蓝色背景，不碰地图和橙色点
+                                      if (
+                                        bg === "rgb(43, 119, 172)" ||
+                                        bg === "rgb(43,119,172)" ||
+                                        bg === "rgb(44, 126, 182)" ||
+                                        bg === "rgb(44,126,182)"
+                                      ) {
+                                        el.style.backgroundColor = "#252525";
+                                      }
+                                    });
+                                  }
+                                
+                                  setTimeout(replaceMapBlueOnly, 500);
+                                  setTimeout(replaceMapBlueOnly, 1500);
+                                  setTimeout(replaceMapBlueOnly, 3000);
+                                </script>
 
                     
                 </div>
