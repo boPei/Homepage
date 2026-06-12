@@ -594,51 +594,27 @@
                         </div> -->
 
                         <style>
-                        .mapmyvisitors-dark {
-                          background: #252525 !important;
-                          width: 505px;
-                          display: inline-block;
-                          overflow: hidden;
-                        }
+                          .mapmyvisitors-flagcounter-style {
+                            background: #252525;
+                            width: 505px;
+                            display: inline-block;
+                            overflow: hidden;
+                            border: 0;
+                          }
                         
-                        .mapmyvisitors-dark,
-                        .mapmyvisitors-dark .jvectormap-container,
-                        .mapmyvisitors-dark svg {
-                          background: #252525 !important;
-                        }
-                        
-                        .mapmyvisitors-dark svg rect {
-                          fill: #252525 !important;
-                        }
-                        
-                        .mapmyvisitors-dark .mapmyvisitors-visitors,
-                        .mapmyvisitors-dark .mapmyvisitors-date {
-                          color: #ffffff !important;
-                        }
+                          .mapmyvisitors-flagcounter-style iframe,
+                          .mapmyvisitors-flagcounter-style canvas,
+                          .mapmyvisitors-flagcounter-style svg,
+                          .mapmyvisitors-flagcounter-style img {
+                            filter: grayscale(100%) brightness(58%) contrast(120%);
+                          }
                         </style>
                         
-                        <div class="mapmyvisitors-dark" id="myVisitorMap">
+                        <div class="mapmyvisitors-flagcounter-style">
                           <script type="text/javascript" id="mapmyvisitors"
                             src="https://mapmyvisitors.com/map.js?d=d8oFblGGabRBEXTZQtDv8_uKBInr87bMosGh4lGiTP0&cl=ffffff&w=500">
                           </script>
                         </div>
-                        
-                        <script>
-                        setTimeout(function () {
-                          const mapBox = document.querySelector("#myVisitorMap");
-                        
-                          if (mapBox) {
-                            mapBox.querySelectorAll(".jvectormap-container, svg").forEach(function (el) {
-                              el.style.background = "#252525";
-                            });
-                        
-                            mapBox.querySelectorAll("svg rect").forEach(function (el) {
-                              el.setAttribute("fill", "#252525");
-                              el.style.fill = "#252525";
-                            });
-                          }
-                        }, 1000);
-                        </script>
 
                     
                 </div>
