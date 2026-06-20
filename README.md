@@ -1,17 +1,17 @@
-# VISTA Lab – Visualization, Intelligent Systems, and Trustworthy AI in Education
+# VISTA Lab – Visualization, Intelligent Systems, and Trustworthy Analytics for Education
 
 Welcome to the GitHub Pages repository for the **VISTA Lab**.
 
 ## 🔍 About the Lab
 
-The **VISTA Lab (Visualization, Intelligent Systems, and Trustworthy AI in Education)** conducts interdisciplinary research at the intersection of:
+The **VISTA Lab (Visualization, Intelligent Systems, and Trustworthy Analytics for Education)** conducts interdisciplinary research at the intersection of:
 
 - 🧠 **Artificial Intelligence in Education**
 - 📊 **Data Visualization and Visual Learning Analytics**
 - 🎯 **Equity-Focused Learning Design**
 - 📈 **Learning Analytics and Educational Data Mining**
 
-Our mission is to advance equitable and effective educational practices through intelligent systems, trustworthy AI, and user-centered data visualizations.
+Our mission is to advance equitable and effective educational practices through intelligent systems, trustworthy Analytics, and user-centered data visualizations.
 
 ## 🌐 Website
 
